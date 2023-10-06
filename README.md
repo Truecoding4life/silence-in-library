@@ -54,6 +54,19 @@ The search results page (`search-results.html`) should have and do the following
 
 * The same form from the homepage should be here as well. Instead of redirecting a user to another page, however, it will perform a search right on the page and display the new results.
 
+
+
+## PSEUDO CODE 
+
+* TEXTBOX TAKE IN INPUT AND SEND REQUEST FOR API DEPENDING ON THE INPUT
+    *  WHEN THE RESPONSE COME BACK, IT SHOULD RENDER RESULT ON THE SAME PAGE.
+* USER CAN CHOSE WHICH FORMAT TO SEARCH FOR RESULT
+    * USER CAN SELECT FORMATS AS OPTION.
+    * If NONE OF FORMAT IS SELECTED, SEARCH RESULT SHOULD END WITH (link.com/format=)
+
+
+
+
 ## Assets
 
 The following image demonstrates the homepage's appearance and functionality:

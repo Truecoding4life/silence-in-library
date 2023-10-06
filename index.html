@@ -9,7 +9,35 @@
     <title>Congress Library</title>
 </head>
 <body>
-
-    <script src="./asset/script.js"></script>
+<header> 
+    <h1> Congress Library Search Engine</h1>
+    <p> We have all the info you need</p>
+</header>
+<main>
+    <section>
+        <div class="card">
+            <h2>Enter Search</h2>
+            <form>
+              <ul>
+                  <label for="grade">Format</label>
+                  <select id="grades">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                  </select>
+                </li>
+                <li>
+                  <label for="msg">Search for:</label>
+                  <textarea id="msg" name="comments"></textarea>
+                </li>
+              </ul>
+              <button id="save">Search</button>
+            </form> 
+            <h3 class="message"></h3>   
+          </div>
+    </section>
+</main>
+    <script src="./asset/js/script.js"></script>
 </body>
 </html>
