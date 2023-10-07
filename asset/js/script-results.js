@@ -50,8 +50,32 @@ $(function() {
     getSearchQuery()
 });
 
+// Add eventlistner to the search botton
+$("#search").on("click",function(event) {
+    event.preventDefault();
+    var searchedTerm = $("input").val();
+    var selectedFormat = $("#format").val();
+    var requestUrl = "https://www.loc.gov/search/" + selectedFormat +"?fo=json&q="+ searchedTerm;
+    var thing;
+    fetch(requestUrl)
+        .then(function(response) {
+            console.log('return response is'+ response)
+            return response.json();
+        }).then(function(data){
+            console.log("data received is "+ data );
+            console.log(requestUrl);
+            thing = data;
+            
+            for (var i = 0; i < 2; i++) {
+                var title = data.results[i].title;
+                var date = data.results[i].date;
+                var description = data.results[i].description[0];
 
+                console.log("title:", title, "date:", date, "description:", description);
+            }
 
+        })
+});
 
 
 
